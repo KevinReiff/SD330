@@ -1,1 +1,169 @@
-Hello World from Kevin Reiff
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the files and projects in Kevin Reiff's GitHub repository.">
+    <title>Kevin Reiff's GitHub Repository</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://raw.githubusercontent.com/KevinReiff/SD330/main/assets/Forest.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 10px 0;
+            color: #222;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        main {
+            padding: 10px 0;
+        }
+
+        main h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0073e6;
+            font-size: 1.6em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin: 15px 0;
+            font-size: 1.1em;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: rgba(0, 115, 230, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        ul li a:hover {
+            background-color: #0073e6;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+            background: #333;
+            color: white;
+            font-size: 0.9em;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body onload="Filelist()">
+    <div class="overlay"></div>
+    <div class="container">
+        <header>
+            <img src="https://raw.githubusercontent.com/KevinReiff/SD330/main/assets/KR.jpeg" alt="Professional Banner">
+            <h1>Welcome to Kevin Reiff's GitHub Repository</h1>
+            <p>Explore my files, projects, and resources below.</p>
+        </header>
+        <main>
+            <h2>Repository File List</h2>
+            <ul id="files"></ul>
+        </main>
+        <footer>
+            <p>© 2024 Kevin Reiff | Last Updated: November 17, 2024</p>
+        </footer>
+    </div>
+
+    <script>
+        async function Filelist() {
+            const repoUrl = "https://api.github.com/repos/KevinReiff/SD330/contents/";
+            const fileListElement = document.getElementById('files');
+            let htmlString = "";
+
+            try {
+                const response = await fetch(repoUrl);
+                const data = await response.json();
+
+                for (let item of data) {
+                    let itemUrl = "";
+
+                    if (item.type === "dir") {
+                        // For directories, link to the GitHub repository URL
+                        itemUrl = `https://github.com/KevinReiff/SD330/tree/main/${item.name}`;
+                    } else if (item.type === "file") {
+                        // For files, link to GitHub Pages URL
+                        itemUrl = `https://KevinReiff.github.io/SD330/${item.name}`;
+                    }
+
+                    htmlString += `<li><a href="${itemUrl}" target="_blank">${item.name}</a></li>`;
+                }
+
+                fileListElement.innerHTML = htmlString;
+            } catch (error) {
+                fileListElement.innerHTML = `<p style="color:red;">Error fetching file list. Please check the repository URL.</p>`;
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+
+</html>
