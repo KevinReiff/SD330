@@ -1,0 +1,151 @@
+{
+    "parkingLots": [
+      {
+        "name": "McCann Lot",
+        "mapFilename": "mapMcCannLot.jpg",
+        "totalSpaces": 250,
+        "comments": "Large lot near McCann gym, available for events and student use.",
+        "location": "Central Campus",
+        "hours": "24 Hours",
+        "evChargersYN": "Y",
+        "security": "Surveillance cameras and security patrols",
+        "spaces": [
+          {
+            "spaceId": 1,
+            "type": "Handicap",
+            "status": "Available",
+            "filledDateTime": null,
+            "reservedDateTime": null
+          },
+          {
+            "spaceId": 2,
+            "type": "Student",
+            "status": "Reserved",
+            "filledDateTime": null,
+            "reservedDateTime": "2024-11-24T09:00:00"
+          },
+          {
+            "spaceId": 3,
+            "type": "Faculty/Staff",
+            "status": "Filled",
+            "filledDateTime": "2024-11-24T08:30:00",
+            "reservedDateTime": null
+          },
+          {
+            "spaceId": 4,
+            "type": "Handicap",
+            "status": "Available",
+            "filledDateTime": null,
+            "reservedDateTime": null
+          },
+          {
+            "spaceId": 5,
+            "type": "Student",
+            "status": "Filled",
+            "filledDateTime": "2024-11-24T10:00:00",
+            "reservedDateTime": null
+          },
+          {
+            "spaceId": 6,
+            "type": "Faculty/Staff",
+            "status": "Available",
+            "filledDateTime": null,
+            "reservedDateTime": null
+          },
+          {
+            "spaceId": 7,
+            "type": "Student",
+            "status": "Reserved",
+            "filledDateTime": null,
+            "reservedDateTime": "2024-11-24T11:30:00"
+          },
+          {
+            "spaceId": 8,
+            "type": "Handicap",
+            "status": "Filled",
+            "filledDateTime": "2024-11-24T09:45:00",
+            "reservedDateTime": null
+          },
+          {
+            "spaceId": 9,
+            "type": "Student",
+            "status": "Available",
+            "filledDateTime": null,
+            "reservedDateTime": null
+          },
+          {
+            "spaceId": 10,
+            "type": "Faculty/Staff",
+            "status": "Filled",
+            "filledDateTime": "2024-11-24T12:15:00",
+            "reservedDateTime": null
+          },
+          {
+            "spaceId": 11,
+            "type": "Student",
+            "status": "Available",
+            "filledDateTime": null,
+            "reservedDateTime": null
+          },
+          {
+            "spaceId": 12,
+            "type": "Student",
+            "status": "Reserved",
+            "filledDateTime": null,
+            "reservedDateTime": "2024-11-24T13:00:00"
+          }
+        ]
+      },
+      {
+        "name": "Upper West Lot",
+        "mapFilename": "mapBeckLot.jpg",
+        "totalSpaces": 75,
+        "comments": "Small lot near Beck building, mainly for faculty.",
+        "location": "West Campus",
+        "hours": "7 AM - 10 PM",
+        "evChargersYN": "N",
+        "security": "Surveillance cameras"
+      },
+      {
+        "name": "Dyson Lot",
+        "mapFilename": "mapDysonLot.jpg",
+        "totalSpaces": 60,
+        "comments": "Reserved for faculty and staff, with some handicap spaces.",
+        "location": "East Campus",
+        "hours": "8 AM - 8 PM",
+        "evChargersYN": "Y",
+        "security": "Security guards"
+      },
+      {
+        "name": "Foy Lot",
+        "mapFilename": "mapFoyLot.jpg",
+        "totalSpaces": 100,
+        "comments": "Close to Foy Townhouses, primarily for student use.",
+        "location": "North Campus",
+        "hours": "24 Hours",
+        "evChargersYN": "N",
+        "security": "Emergency phones"
+      },
+      {
+        "name": "Fontaine Lot",
+        "mapFilename": "mapFontaineLot.jpg",
+        "totalSpaces": 50,
+        "comments": "Mixed use, primarily for visitors and students.",
+        "location": "Central Campus",
+        "hours": "7 AM - 11 PM",
+        "evChargersYN": "N",
+        "security": "Surveillance cameras"
+      },
+      {
+        "name": "Steel Plant Lot",
+        "mapFilename": "mapSteelPlantLot.jpg",
+        "totalSpaces": 40,
+        "comments": "Available to students and faculty, near art studios.",
+        "location": "South Campus",
+        "hours": "6 AM - 10 PM",
+        "evChargersYN": "N",
+        "security": "Security patrols"
+      }
+    ]
+  }
+  
