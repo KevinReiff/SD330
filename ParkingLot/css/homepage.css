@@ -100,12 +100,18 @@ header nav ul li a:hover {
     background: #fff;
     padding: 10px;
     border: 2px solid white;
-    width: 100%;
-    max-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #options .option a {
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 #options .option img {

@@ -99,12 +99,14 @@ main #lots-list {
     font-size: 1.3em;
     color: #900;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .lot p {
     font-size: 1em;
     color: #555;
     margin: 0;
+    text-decoration: none;
 }
 
 .lot:hover {
