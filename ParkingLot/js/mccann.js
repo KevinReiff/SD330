@@ -1,3 +1,12 @@
+// Helper function to format date and time
+function formatDateTime(dateTime) {
+    if (!dateTime) return "Not Filled/Not Reserved";
+    const date = new Date(dateTime);
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit' };
+    return date.toLocaleDateString("en-US", options);
+}
+
+// Fetch JSON data and populate the page
 fetch("../../parking.json")
     .then(response => response.json())
     .then(data => {
@@ -13,8 +22,8 @@ fetch("../../parking.json")
         // Populate spaces
         const spacesList = document.getElementById("spaces-list");
         mccannLot.spaces.forEach(space => {
-            const filledDate = space.filledDateTime ? space.filledDateTime : "Not Filled";
-            const reservedDate = space.reservedDateTime ? space.reservedDateTime : "Not Reserved";
+            const filledDate = formatDateTime(space.filledDateTime);
+            const reservedDate = formatDateTime(space.reservedDateTime);
 
             const spaceElement = document.createElement("div");
             spaceElement.className = "space";
