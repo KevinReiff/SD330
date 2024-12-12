@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,7 +9,7 @@ body {
     flex-direction: column;
 }
 
-/* Header */
+
 header {
     background-color: #900;
     color: #fff;
@@ -53,7 +53,7 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Lot Info Section */
+
 #lot-info {
     text-align: center;
     padding: 20px;
@@ -84,7 +84,7 @@ header nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Spaces Section */
+
 #spaces-container {
     padding: 20px;
     text-align: center;
@@ -123,7 +123,7 @@ header nav ul li a:hover {
     color: #900;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 10px;

@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,7 +9,6 @@ body {
     justify-content: space-between;
 }
 
-/* Header */
 header {
     background-color: #900;
     color: #fff;
@@ -52,7 +51,7 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Main Section */
+
 main {
     display: flex;
     flex-direction: column;
@@ -104,7 +103,7 @@ main #error-content .home-button:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 10px;
