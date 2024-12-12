@@ -25,6 +25,7 @@ header nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
@@ -59,33 +60,35 @@ main {
     align-items: center;
     text-align: center;
     flex: 1;
+    padding: 20px;
 }
 
 main #error-content {
-    margin-top: -50px; /* Adjust overall section spacing */
+    margin-top: -50px;
 }
 
 main #error-content .error-title {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #900;
-    margin-bottom: 10px; /* Bring closer to the image */
+    margin-bottom: 10px;
 }
 
 main #error-content img {
-    width: 400px; /* Doubled size */
+    width: 100%;
+    max-width: 400px;
     height: auto;
-    margin-bottom: 10px; /* Reduce spacing below the image */
+    margin-bottom: 10px;
 }
 
 main #error-content h2 {
     font-size: 1.5em;
     color: #333;
-    margin-top: 10px; /* Reduce spacing above the button */
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
 main #error-content .home-button {
-    background-color: #900; /* Red button */
+    background-color: #900;
     color: #ceb1b1;
     text-decoration: none;
     padding: 10px 20px;
@@ -97,7 +100,7 @@ main #error-content .home-button {
 }
 
 main #error-content .home-button:hover {
-    background-color: #700; /* Darker red on hover */
+    background-color: #700;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -109,4 +112,47 @@ footer {
     color: #fff;
     font-size: 0.9em;
     position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main #error-content .error-title {
+        font-size: 1.8em;
+    }
+
+    main #error-content img {
+        max-width: 300px;
+    }
+
+    main #error-content h2 {
+        font-size: 1.2em;
+    }
+
+    main #error-content .home-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li.logo img {
+        height: 30px;
+    }
+
+    main #error-content .error-title {
+        font-size: 1.5em;
+    }
+
+    main #error-content img {
+        max-width: 200px;
+    }
+
+    main #error-content h2 {
+        font-size: 1em;
+    }
+
+    main #error-content .home-button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
 }

@@ -5,17 +5,17 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: space-between;
+    min-height: 100vh;
 }
 
 /* Header */
 header {
     background-color: #900;
     color: #fff;
-    padding: 20px 0;
+    padding: 15px 0;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 header nav ul {
@@ -25,6 +25,7 @@ header nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
@@ -39,13 +40,13 @@ header nav ul li a {
 }
 
 header nav ul li.logo img {
-    height: 50px;
+    height: 40px;
     vertical-align: middle;
 }
 
 header nav ul div.nav-links {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 header nav ul li a:hover {
@@ -57,23 +58,23 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
-    height: calc(100vh - 120px); /* Adjust height to fit within viewport */
+    padding: 20px;
+    flex: 1;
+    width: 100%;
 }
 
 main #lots-container h1 {
     font-size: 2.5em;
     color: #900;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 main #lots-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Arrange into 3 columns */
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     width: 90%;
-    height: auto;
     justify-content: center;
     align-items: center;
 }
@@ -81,30 +82,31 @@ main #lots-list {
 /* Individual Lot */
 .lot {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     border: 2px solid white;
     border-radius: 10px;
-    background: #e6e6e6; /* Light gray background for buttons */
+    background: #e6e6e6;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s, box-shadow 0.2s;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .lot img {
     width: 100%;
-    height: 200px; /* Increased height */
+    max-width: 300px;
+    height: auto;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .lot h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #900;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .lot p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #555;
     margin: 0;
 }
@@ -114,17 +116,49 @@ main #lots-list {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Remove underline from links */
-a {
-    text-decoration: none;
-}
-
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     background-color: #900;
     color: #fff;
-    font-size: 1em;
+    font-size: 0.9em;
     position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main #lots-container h1 {
+        font-size: 2em;
+    }
+
+    .lot h2 {
+        font-size: 1.2em;
+    }
+
+    .lot p {
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .lot img {
+        max-width: 200px;
+    }
+
+    main #lots-container h1 {
+        font-size: 1.8em;
+    }
 }

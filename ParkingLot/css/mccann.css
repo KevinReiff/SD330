@@ -4,6 +4,9 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -13,6 +16,7 @@ header {
     padding: 15px 0;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 header nav ul {
@@ -22,6 +26,7 @@ header nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
@@ -59,8 +64,7 @@ header nav ul li a:hover {
 #lot-info img {
     width: 100%;
     max-width: 800px;
-    max-height: 450px;
-    object-fit: cover;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 15px;
@@ -72,21 +76,23 @@ header nav ul li a:hover {
     margin: 0 auto;
     text-align: left;
     display: inline-block;
+    max-width: 600px;
 }
 
 #lot-details li {
     font-size: 1em;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* Spaces Section */
 #spaces-container {
     padding: 20px;
     text-align: center;
+    flex: 1;
 }
 
 #spaces-container h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #900;
     margin-bottom: 20px;
 }
@@ -96,6 +102,7 @@ header nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin: 0 auto;
+    width: 90%;
 }
 
 .space {
@@ -123,4 +130,50 @@ footer {
     background-color: #900;
     color: #fff;
     font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #lot-info img {
+        max-width: 600px;
+    }
+
+    #lot-details ul {
+        max-width: 100%;
+    }
+
+    #spaces-container h2 {
+        font-size: 1.5em;
+    }
+
+    .space p {
+        font-size: 0.8em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #lot-info img {
+        max-width: 100%;
+    }
+
+    #spaces-container h2 {
+        font-size: 1.2em;
+    }
+
+    .space {
+        padding: 10px;
+    }
 }
