@@ -2,7 +2,7 @@
     "parkingLots": [
       {
         "name": "McCann Lot",
-        "mapFilename": "mapMcCannLot.jpg",
+        "mapFilename": "McCann.png",
         "totalSpaces": 250,
         "comments": "Large lot near McCann gym, available for events and student use.",
         "location": "Central Campus",
@@ -98,7 +98,7 @@
       },
       {
         "name": "Upper West Lot",
-        "mapFilename": "mapBeckLot.jpg",
+        "mapFilename": "UpperWest.png",
         "totalSpaces": 75,
         "comments": "Small lot near Beck building, mainly for faculty.",
         "location": "West Campus",
@@ -108,7 +108,7 @@
       },
       {
         "name": "Dyson Lot",
-        "mapFilename": "mapDysonLot.jpg",
+        "mapFilename": "Dyson.png",
         "totalSpaces": 60,
         "comments": "Reserved for faculty and staff, with some handicap spaces.",
         "location": "East Campus",
@@ -118,7 +118,7 @@
       },
       {
         "name": "Foy Lot",
-        "mapFilename": "mapFoyLot.jpg",
+        "mapFilename": "Foy.png",
         "totalSpaces": 100,
         "comments": "Close to Foy Townhouses, primarily for student use.",
         "location": "North Campus",
@@ -128,7 +128,7 @@
       },
       {
         "name": "Fontaine Lot",
-        "mapFilename": "mapFontaineLot.jpg",
+        "mapFilename": "Fontaine.png",
         "totalSpaces": 50,
         "comments": "Mixed use, primarily for visitors and students.",
         "location": "Central Campus",
@@ -138,7 +138,7 @@
       },
       {
         "name": "Steel Plant Lot",
-        "mapFilename": "mapSteelPlantLot.jpg",
+        "mapFilename": "SteelPlant.png",
         "totalSpaces": 40,
         "comments": "Available to students and faculty, near art studios.",
         "location": "South Campus",

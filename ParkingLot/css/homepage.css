@@ -4,12 +4,18 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Header */
 header {
     background-color: #900;
     color: #fff;
     padding: 10px 0;
+    position: sticky;
+    top: 0;
 }
 
 header nav ul {
@@ -17,7 +23,8 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header nav ul li {
@@ -26,108 +33,162 @@ header nav ul li {
 
 header nav ul li a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; /* Removed blue underline */
     font-weight: bold;
+}
+
+header nav ul li.logo img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+header nav ul div.nav-links {
+    display: flex;
+    gap: 15px;
 }
 
 header nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Main Content Section */
+#main-content {
+    background-image: url('../public/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70%; /* Adjusted to leave space for 40% "Why Choose Our App" */
+}
+
 /* Intro Section */
 #intro {
     text-align: center;
-    padding: 50px 20px;
-    background-image: url('../Public/images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    padding: 20px 20px; /* Reduced padding */
+    color: #900; /* Made the text bold red for contrast */
 }
 
 #intro h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 3em; /* Increased font size for readability */
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px; /* Slight letter spacing for clarity */
 }
 
 #intro p {
-    font-size: 1.2em;
+    font-size: 1.3em; /* Increased font size for better readability */
+    font-weight: normal;
+    margin-bottom: 10px;
 }
 
 /* Options Section */
 #options {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px;
-    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    justify-items: center;
+    align-items: center;
 }
 
 #options .option {
     text-align: center;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-color: #f9f9f9;
+    width: 300px;
+    height: 350px; /* Adjusted height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    border: 2px solid white; /* White border outline */
+}
+
+#options .option a {
+    text-decoration: none; /* Removed blue underline */
 }
 
 #options .option img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Added spacing below images */
 }
 
 #options .option h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #900;
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 #options .option p {
-    padding: 0 10px 20px;
     font-size: 1em;
     color: #555;
-}
-
-#options .option a {
-    text-decoration: none;
+    margin-top: 10px; /* Adjusted spacing to fill blank area */
 }
 
 /* Supporting Info Section */
 #supporting-info {
-    padding: 40px 20px;
+    padding: 0 !important; /* Removed extra padding */
     background-color: #eee;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important; /* Tightened spacing between elements */
+    height: 40% !important; /* Section height remains the same */
+    margin-top: -50px !important; /* Pull section closer to the background image */
 }
 
 #supporting-info h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 30px;
-    color: #900;
+    text-align: center !important;
+    font-size: 2.5em !important; /* Maintained font size */
+    margin-bottom: 0 !important; /* Removed bottom margin */
+    margin-top: -30px !important; /* Pulled heading closer to the background image */
+    color: #900 !important;
+    font-weight: bold !important;
+    width: 100% !important;
 }
 
-.supporting-text {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+.supporting-content {
+    display: flex !important;
+    gap: 10px !important; /* Tightened gap between items */
+    justify-content: center !important;
+    margin-top: -20px !important; /* Pulled items closer to the heading */
 }
 
-.supporting-text p {
-    flex: 1;
-    padding: 0 20px;
+.supporting-item {
+    flex: 0 0 300px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    background: #fff !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    padding: 10px !important; /* Reduced padding for compact look */
 }
 
-.supporting-text img {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
+.supporting-item img {
+    width: 90px !important;
+    height: auto !important;
+    margin-bottom: 5px !important; /* Tightened spacing */
+}
+
+.supporting-item p {
+    font-size: 1.1em !important;
+    color: #555 !important;
+    text-align: center !important;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #900;
     color: #fff;
     font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

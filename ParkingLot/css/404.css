@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    background-color: #900;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li.logo img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+header nav ul div.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+main #error-content {
+    margin-top: -50px; /* Adjust overall section spacing */
+}
+
+main #error-content .error-title {
+    font-size: 2.5em;
+    color: #900;
+    margin-bottom: 10px; /* Bring closer to the image */
+}
+
+main #error-content img {
+    width: 400px; /* Doubled size */
+    height: auto;
+    margin-bottom: 10px; /* Reduce spacing below the image */
+}
+
+main #error-content h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 10px; /* Reduce spacing above the button */
+    margin-bottom: 20px;
+}
+
+main #error-content .home-button {
+    background-color: #900; /* Red button */
+    color: #ceb1b1;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+main #error-content .home-button:hover {
+    background-color: #700; /* Darker red on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #900;
+    color: #fff;
+    font-size: 0.9em;
+    position: relative;
+}

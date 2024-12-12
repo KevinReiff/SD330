@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    background-color: #900;
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+header nav ul li.logo img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+header nav ul div.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    height: calc(100vh - 120px); /* Adjust height to fit within viewport */
+}
+
+main #lots-container h1 {
+    font-size: 2.5em;
+    color: #900;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+main #lots-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Arrange into 3 columns */
+    gap: 30px;
+    width: 90%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual Lot */
+.lot {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: #e6e6e6; /* Light gray background for buttons */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 1.2em;
+}
+
+.lot img {
+    width: 100%;
+    height: 200px; /* Increased height */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.lot h2 {
+    font-size: 1.5em;
+    color: #900;
+    margin-bottom: 15px;
+}
+
+.lot p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 0;
+}
+
+.lot:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove underline from links */
+a {
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #900;
+    color: #fff;
+    font-size: 1em;
+    position: relative;
+}

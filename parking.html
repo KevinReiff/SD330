@@ -10,19 +10,19 @@
     <header>
         <nav>
             <ul>
-                <li><a href="parking.html">Home</a></li>
-                <li><a href="ParkingLot/html/lots.html">Parking Lots</a></li>
-                <li><a href="ParkingLot/html/spaces.html">Spaces</a></li>
-                <li><a href="ParkingLot/html/contact.html">Contact</a></li>
-                <li><a href="ParkingLot/html/about.html">About</a></li>
-                <li><a href="ParkingLot/html/help.html">Help</a></li>
-                <li><a href="ParkingLot/html/settings.html">Settings</a></li>
-                <li><a href="ParkingLot/html/support.html">Support</a></li>
+                <li class="logo"><a href="parking.html"><img src="ParkingLot/public/logo.png" alt="Logo"></a></li>
+                <div class="nav-links">
+                    <li><a href="parking.html">Home</a></li>
+                    <li><a href="ParkingLot/html/404.html">Contact Us</a></li>
+                    <li><a href="ParkingLot/html/404.html">About</a></li>
+                    <li><a href="ParkingLot/html/404.html">Settings</a></li>
+                    <li><a href="ParkingLot/html/404.html">Support</a></li>
+                </div>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section id="intro">
             <h1>Welcome to the Marist Parking Lot App</h1>
             <p>Navigate parking at Marist College with ease. Choose an option below to get started.</p>
@@ -37,41 +37,42 @@
                 <p>Explore all parking lots available on campus, complete with details and availability.</p>
             </div>
             <div class="option">
-                <a href="ParkingLot/html/permit.html">
+                <a href="https://www.marist.edu/security/parking" target="_blank">
                     <img src="ParkingLot/public/permit.jpg" alt="Parking Permit Procedure">
                     <h2>Parking Permit Procedure</h2>
                 </a>
                 <p>Learn how to acquire a parking permit for the academic year.</p>
             </div>
             <div class="option">
-                <a href="ParkingLot/html/ticket.html">
+                <a href="https://forms.office.com/pages/responsepage.aspx?id=nq-hFIyyJ0uyQyXDPbb_-rGiSESzJGBIhRXl1GPlWjVUN1I3V1BPVFJWTFZZVjVEWUVWSFhBU0dEVy4u&route=shorturl" target="_blank">
                     <img src="ParkingLot/public/ticket.png" alt="Ticketing Appeal Form">
                     <h2>Ticketing Appeal Form</h2>
                 </a>
                 <p>Dispute a parking ticket easily through our online form.</p>
             </div>
         </section>
-
-        <section id="supporting-info">
-            <h2>Why Choose Our App?</h2>
-            <div class="supporting-text">
-                <p>Our app simplifies your parking experience with live updates, detailed lot information, and easy permit management.</p>
-                <img src="ParkingLot/public/list.png" alt="List">
-            </div>
-            <div class="supporting-text">
-                <p>Find the closest parking to your classes or events, with comprehensive maps and navigation tools.</p>
-                <img src="ParkingLot/public/map.png" alt="Navigation">
-            </div>
-            <div class="supporting-text">
-                <p>Avoid unnecessary fines with detailed guidelines and real-time notifications about lot restrictions.</p>
-                <img src="ParkingLot/public/fine.png" alt="Fines and Restrictions">
-            </div>
-        </section>
     </main>
 
+    <section id="supporting-info">
+        <h2>Why Choose Our App?</h2>
+        <div class="supporting-content">
+            <div class="supporting-item">
+                <img src="ParkingLot/public/list.png" alt="List">
+                <p>Our app simplifies your parking experience with live updates, detailed lot information, and easy permit management.</p>
+            </div>
+            <div class="supporting-item">
+                <img src="ParkingLot/public/map.png" alt="Navigation">
+                <p>Find the closest parking to your classes or events, with comprehensive maps and navigation tools.</p>
+            </div>
+            <div class="supporting-item">
+                <img src="ParkingLot/public/fine.png" alt="Fines and Restrictions">
+                <p>Avoid unnecessary fines with detailed guidelines and real-time notifications about lot restrictions.</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Marist Parking. All rights reserved.</p>
-        <p>Designed by Kevin Reiff</p>
+        <p>&copy; Kevin Reiff 12/11/2024</p>
     </footer>
 </body>
 </html>
